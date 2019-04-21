@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <!-- //TODO: display an unordered list of category names -->
+        <li th:each="category : ${categories}">
+            <td th:text="${category.name}"></td>
+            <!-- <a th:href="@{/list/values(column=${category})}" th:text="${category.name}"></a> -->
+        </li>
+    </ul>
+    <a href="/category/add">Add Category</a>
+</body>
+</html>
